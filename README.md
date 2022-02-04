@@ -9,6 +9,7 @@ write the below code to clone the darknet repository:
 2. cd darknet
 
 After cloning the repository we have to create a make file to use darknet. perform step 3,4,5 for setup the darknet environment
+
 3. vi Makefile
 4. make
 5. ./darknet
@@ -16,10 +17,12 @@ After cloning the repository we have to create a make file to use darknet. perfo
 Note: if you are using GPU then put 1 in Makefile otherwise put 0 
 
 If the step 5 runs properly we will see an output as 
+
 usage: ./darknet <function>
  
 If there is an error in step 5 run the following command and then again go to step 5 you will be able to fix the error
-"ENter the command to fix the error
+"Enter the command to fix the error
+ 
 
   
 #Daraset Preparation
@@ -53,21 +56,32 @@ Images {
 Here we have to change the format of bbox into YOLO format and save it into a text file with the same name as the name of the image
  
 The YOLO format contain 5 things for each annotations
+ 
 1st is the class id for which the annotations is
+ 
 2nd and 3rd are the coordinate of the center of the boundary box
+ 
 4th and 5th are the width and height of the boundary box and this all values should be normalized
 
 Lets say
+ 
  if x,y,w,h are the coordinate and widht and height of the boundary box in a COCO format
+ 
  then,
+ 
   The values in YOLO Format is:
+ 
     <absolute_x> = <x1>/<image_width>
+     
     <absolute_y> = <y1>/<image_height>
+     
     <absolute_width> = <w>/<image_width>
+     
     <absolute_height> = <h>/<image_height>
+     
 
 All the conversion of the COCO format to YOLO format are in COCO_to_YOLO_format.ipynb
-
+     
 After creating all the text file for all the images. Keep the images and the text file in same folder
 
 Now we have to split the dataset into training and testing dataset. Here we have to give the path of the images for training and testing
