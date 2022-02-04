@@ -35,7 +35,7 @@ Enter the command to fix the error
 As the dataset is in coco format. we have to convert that dataset in text file as yolo use txt files for labels.
 COCO_to_YOLO_format.ipynb   is the file use to convert it into yolo format.
 
-The Original dataset is in josn file which contain 4 keywords
+The Original dataset is in json file which contain 4 keywords
   1. images
   2. annotations
   3. categories
@@ -61,7 +61,9 @@ Images {
  
  }
 
+Below is the format of the Json file
 
+![Alt text](Images/json_structure.png?raw=True "title")
 
 
 Here we have to change the format of bbox into YOLO format and save it into a text file with the same name as the name of the image
@@ -88,11 +90,11 @@ Lets say if,
      
  Below is the format of Json File
  
-![Alt text](Images/previous_format.png?raw=False "Previous Format Array")  
+![Alt text](Images/previous_format.png?raw=True "title")  
 
 After converting it into YOLO format
 
-![Alt text](Images/new_format.png?raw=False "New Format Array")
+![Alt text](Images/new_format.png?raw=True "title")
 
 
 
@@ -106,7 +108,7 @@ After creating all the text file for all the images. Keep the images and the tex
 
 The Folder should look like this
 
-![Alt text](Images/final_folder.png?raw=False "New Format Array")
+![Alt text](Images/final_folder.png?raw=True "title")
 
 
 Now after creating the folder we have to split the dataset into training and testing set.
@@ -165,8 +167,8 @@ Now we have our model weight. Lets test it on one of the image. For testing it w
 
 I have downloaded some images on which I have tested my model and got good results here are some of the results
 
-![Alt text](Images/person_pred.jpg?raw=False "New Format Array")
-![Alt text](Images/car_pred.jpg?raw=False "New Format Array")
-![Alt text](Images/person_car_pred.jpg?raw=False "New Format Array")
+![Alt text](Images/person_pred.jpg?raw=True "title")
+![Alt text](Images/car_pred.jpg?raw=True "title")
+![Alt text](Images/person_car_pred.jpg?raw=True "title")
 
 
